@@ -3,46 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title> Welcome! </title>
+	<title> Login </title>
 	<meta name="description" content="Game web site for account creation, editing and deletion.">
 	<meta name="viewport" content="width=device-width, intial-scale=1">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="GameSiteStyle.css">
+	<link rel="stylesheet" type="text/css" href="../GameSiteStyle.css">
+
+	<!-- google sign in button -->
+
 </head>
 
 
 <body>
 	<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand"> <img src="TempSmallLogo.png" alt="TempSmallLogo"> </a>
+        <a href="MainPage.html" class="navbar-brand"> <img src="../Assets/TempSmallLogo.png" alt="TempSmallLogo"> </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">News</a></div>
+                    <div class="col"><a href="#" class="nav-link" style="color: rgb(209, 17, 74);">News</a></div>
                 </li>
 				<li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">Login</a></div>
+                    <div class="col"><a href="#" class="nav-link" style="color: rgb(209, 17, 74);">Login</a></div>
                 </li>
                 <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">Sign up</a></div>
-                </li>
-                </li>
-                <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">About us</a></div>
+                    <div class="col"><a href="#" class="nav-link" style="color: rgb(209, 17, 74);">Sign up</a></div>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">Contact us</a></div>
+                    <div class="col"><a href="#" class="nav-link" style="color: rgb(209, 17, 74);">About us</a></div>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <div class="col"><a href="#" class="nav-link" style="color: rgb(209, 17, 74);">Contact us</a></div>
                 </li>
             </ul>
         </div>
     </nav>
 
-	<div class="container">
+
+	<div class="row justify-content-center form-container">
 		<!-- content goes here -->
-	
+		<form action="">
+			<label class="my-lbl" for="username">Username: </label>
+			<input class="form-control my-input" type="text" name="username" id="username">
+			<label class="my-lbl" for="password">Password: </label>
+			<input class="form-control my-input" type="password" name="password" id="password">
+		</form>
+
 	</div>
 
 	<footer class="page-footer fixed-bottom">
@@ -74,9 +85,12 @@
 		</div>
 	
 	</footer>
-<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<div id="fb-root"></div>
+	<script src="script.js"></script>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="p7XBqyjk"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
