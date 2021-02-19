@@ -5,8 +5,17 @@
     src: url("Assets/pdark.ttf");
   }
 
+@font-face {
+    font-family: 'odinRounded';
+    src: url("Assets/Odin\ Rounded\ -\ Bold.otf");
+  }
+
 * {
     font-family: "Merriweather";
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -154,4 +163,8 @@ form{
     background: rgba(143, 30, 30, 0.8);
 }
 
-
+p {
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
