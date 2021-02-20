@@ -7,73 +7,108 @@
 	<meta name="description" content="Game web site for account creation, editing and deletion.">
 	<meta name="viewport" content="width=device-width, intial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="GameSiteStyle.css">
+	<link rel="stylesheet" type="text/css" href="../GameSiteStyle.css">
 </head>
 
 
 <body>
-	<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
-        <a href="#" class="navbar-brand"> <img src="TempSmallLogo.png" alt="TempSmallLogo"> </a>
+	<nav class="navbar my-nv navbar-expand-lg navbar-dark">
+        <a id="top" href="MainPage.html" class="navbar-brand"> <img src="../Assets/TempSmallLogo.png" alt="TempSmallLogo"> </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">News</a></div>
+                    <div class="col"><a href="MainPage.html#news" class="nav-link" style="color: rgb(209, 17, 74);">News</a></div>
                 </li>
 				<li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">Login</a></div>
+                    <div class="col"><a href="SigninPage.html" class="nav-link" style="color: rgb(209, 17, 74);">Login</a></div>
                 </li>
                 <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">Sign up</a></div>
-                </li>
-                </li>
-                <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">About us</a></div>
+                    <div class="col"><a href="SignupPage.html" class="nav-link" style="color: rgb(209, 17, 74);">Sign up</a></div>
                 </li>
                 </li>
                 <li class="nav-item">
-                    <div class="col"><a href="#" class="nav-link" style="color: skyblue;">Contact us</a></div>
+                    <div class="col"><a href="MainPage.html#AboutUs" class="nav-link" style="color: rgb(209, 17, 74);">About us</a></div>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <div class="col"><a href="#" class="nav-link" style="color: rgb(209, 17, 74);">Contact us</a></div>
                 </li>
             </ul>
         </div>
     </nav>
+	<div class="my-cont">
+		
+			<div class="row my-row justify-content-centre" style="margin: 90px 25%;">
+				
+				<div class="wrap-login100">
+					<div class="login100-form-title" >
+						<span class="login100-form-title-1">Sign Up</span>
+					</div>
+					
+					<div class="col">
+						<div class="p-3 px-4 py-4 border-bottom" style="width: 100%;"> 
+							<form class="form" style="width: auto; height: auto; margin: 30px auto;">  
+								<input type="text" class="form-control mt-3" placeholder="Username" required autofocus/> 
+								<input type="text" class="form-control mt-3" placeholder="Email" required autofocus/> 
+								<input type="password" class="form-control mt-3" placeholder="Password" required autofocus/> 
+								<input type="password" class="form-control mt-3" placeholder="Comfirm Password" required autofocus/> 
+							
+								<button class="btn btn-danger btn-block continue mt-5" style="width: 50%; margin: auto;">Continue</button>
+							</form> 
+							<div class="d-flex justify-content-center align-items-center mt-3 mb-3"> 
+								<span class="line"></span> 
+								<small class="px-2 line-text">OR</small> 
+								<span class="line"></span>
+							</div> 
+													
+							<button class="btn btn-danger btn-block continue google-button d-flex justify-content-start align-items-center" style="width: 50%; margin: auto;"> 
+								<i class="fa fa-google ml-2"></i> 
+								<span class="ml-5 px-4">sign up with Google</span> 
+							</button>
+						</div>
 
-	<div class="container">
-		<!-- content goes here -->
-	
+						<div class="p-3 d-flex flex-row justify-content-center align-items-center member"> 
+							<span>Already have an account? </span>
+							<a href="SigninPage.html" class="ml-2">Login</a>
+						</div>
+					</div>
+				</div>
+		
+		</div>
+
+		<footer class="page-footer my-footer">
+
+			<div class="container">
+				<ul class="list-unstyled list-inline text-center">
+					<li class="list-inline-item">
+						<button type="button" class="btn my-btn btn-li" style="background-color: rgb(3, 123, 185) ;"><i class="fab fa-linkedin-in"></i></button>
+					</li>
+					<li class="list-inline-item">
+						<button type="button" class="btn my-btn btn-gplus" style="background-color: rgb(207, 71, 46) ;"><i class="fab fa-google-plus-g"></i></button>
+					</li>
+					<li class="list-inline-item">
+						<button type="button" class="btn my-btn btn-tw" style="background-color: rgb(0, 157, 237) ;"><i class="fab fa-twitter"></i></button>
+					</li>
+					<li class="list-inline-item">
+						<button type="button" class="btn my-btn btn-fb" style="background-color: rgb(56, 88, 147) ;"><i class="fab fa-facebook-f"></i></button>
+					</li>
+					<li class="list-inline-item">
+						<a href="https://github.com/khalilDimassi/Game-Dev-Repositry" target="_blank">
+							<button type="button" class="btn my-btn btn-git" style="background-color: rgb(49, 49, 49) ;"><i class="fab fa-github"></i></button>
+						</a>
+					</li>
+				</ul>	
+			</div>
+			<div class="footer-copyright text-center py-3" style="color: rgb(168, 168, 168);">© 2020 Copyright:
+			<a href="https://github.com/khalilDimassi/Game-Dev-Repositry"> Dev. Team</a>
+			</div>
+		
+		</footer>
 	</div>
 
-	<footer class="page-footer fixed-bottom">
-
-		<div class="container">
-	
-		<!-- Social buttons -->
-		<ul class="list-unstyled list-inline text-center">
-			<li class="list-inline-item">
-				<button type="button" class="btn my-btn btn-li" style="background-color: rgb(3, 123, 185) ;"><i class="fab fa-linkedin-in"></i></button>
-			</li>
-			<li class="list-inline-item">
-				<button type="button" class="btn my-btn btn-gplus" style="background-color: rgb(207, 71, 46) ;"><i class="fab fa-google-plus-g"></i></button>
-			</li>
-			<li class="list-inline-item">
-				<button type="button" class="btn my-btn btn-tw" style="background-color: rgb(0, 157, 237) ;"><i class="fab fa-twitter"></i></button>
-			</li>
-			<li class="list-inline-item">
-				<button type="button" class="btn my-btn btn-fb" style="background-color: rgb(56, 88, 147) ;"><i class="fab fa-facebook-f"></i></button>
-			</li>
-			<li class="list-inline-item">
-				<button type="button" class="btn my-btn btn-git" style="background-color: rgb(49, 49, 49) ;"><i class="fab fa-github"></i></button>
-			</li>
-		</ul>
-	
-		</div>
-		<div class="footer-copyright text-center py-3" style="color: rgb(168, 168, 168);">© 2020 Copyright:
-		<a href="https://github.com/khalilDimassi/Game-Dev-Repositry"> Dev. Team</a>
-		</div>
-	
-	</footer>
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
