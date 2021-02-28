@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
+});
+
+Route::get('/home', function () {
+    return view('landing');
 });
 
 Auth::routes();
 
-Route::get('/match/create', [App\Http\Controllers\MatchController::class, 'create'])->name('match.create');
-Route::post('/match', [App\Http\Controllers\MatchController::class, 'store']);
+Route::get('/game/create', [App\Http\Controllers\GameController::class, 'create'])->name('game.create');
+Route::post('/game', [App\Http\Controllers\GameController::class, 'store']);
 
-Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
+Route::get('/profile/{id?}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');

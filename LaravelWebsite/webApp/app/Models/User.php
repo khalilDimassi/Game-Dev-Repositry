@@ -49,7 +49,7 @@ class User extends Authenticatable
         return $this->hasOne(\App\Models\Profile::class);
     }
 
-    public function matches(){
-        return $this->hasMany(\App\Models\Match::class);
+    public function games(){
+        return $this->hasMany(\App\Models\Game::class)->orderBy('created_at', 'DESC');
     }
 }

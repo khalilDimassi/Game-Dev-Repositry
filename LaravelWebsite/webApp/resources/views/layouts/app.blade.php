@@ -21,9 +21,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mr-2 ml-3">
+
+                <a class="navbar-brand d-flex" href="{{ url('/home') }}">
                     <div><img src="/svg/tempLogo.svg" class="pr-3" style="height: 20px; border-right: 1px solid #000"></div>
                     <div class="pl-3">Game Name Here</div>
                 </a>
@@ -33,11 +33,24 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                            
+                    
+                    <ul class="navbar-nav mr-auto pl-5 ml-2">
+                            <li class="nav-item p-2">
+                                <a class="nav-link" href="#">The Game</a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="nav-link" href="#">About-us</a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="nav-link" href="#">Contact-us</a>
+                            </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+                    
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
@@ -49,10 +62,16 @@
                             
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Get Started') }}</a>
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item pr-5 mr-5">
+                                <a href="#">
+                                    <button class="btn btn-danger">Download for free!</button>
+                                </a>
+                            </li>
+                                
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -73,7 +92,7 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
+
         </nav>
 
         <main class="py-4">
