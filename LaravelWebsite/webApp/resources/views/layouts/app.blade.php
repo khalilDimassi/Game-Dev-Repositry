@@ -33,14 +33,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    
                     <ul class="navbar-nav mr-auto pl-5 ml-2">
-                            <li class="nav-item p-2">
-                                <a class="nav-link" href="#">The Game</a>
-                            </li>
-                            <li class="nav-item p-2">
-                                <a class="nav-link" href="#">News</a>
-                            </li>
                             <li class="nav-item p-2">
                                 <a class="nav-link" href="#">About-us</a>
                             </li>

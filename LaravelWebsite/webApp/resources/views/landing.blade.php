@@ -16,12 +16,11 @@
       
 
       <div class="container-fluid">
-        <section class="container nav-section my-5 py-3" style="height: 100vh">
+        <section class="container nav-section py-2" style="height: 100vh">
 
-          <div class="row px-5 py-2 align-items-center justify-content-around" style="width: 100%; height: 20%">
-            
+          <div class="row px-5 py-2 align-items-center justify-content-around" style="width: 100%; height: 20%">        
             <div class="col-3 justify-content-center align-items-center d-flex h-100">
-              <a href="#" class="d-flex justify-content-center align-items-center">
+              <div href="#" class="d-flex justify-content-center align-items-center">
                 <span class="deco">
                   <img class="i1" src="svg\anim\Deco-1.svg" alt="deco">
                 </span>
@@ -29,34 +28,34 @@
                 <span class="deco">
                   <img class="i2" src="svg\anim\Deco-1.svg" alt="deco">
                 </span>
-              </a>
+              </div>
             </div>
-            
+            <div class="col-3 justify-content-center align-items-center d-flex h-100"></div>
             <div class="col-3 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
-            </div>
-            
-            <div class="col-3 justify-content-center align-items-center d-flex h-100">
-              <a href="#">
+              <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center">
                 <span class="panels">  
                   <img src="svg\anim\signin.svg" alt="signin">
                 </span>
               </a>
             </div>
-
           </div>
+
           <div class="row px-5 py-2 align-items-center justify-content-around" style="width: 100%; height: 20%">
+            <div class="col-2 justify-content-center align-items-center d-flex h-100"></div>
+            <div class="col-2 justify-content-center align-items-center d-flex h-100"></div>
             <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
+              <div class="d-flex align-items-center justify-content-center">
+                <span id="sign-link">  
+                  <img src="svg\anim\signLink.svg" alt="signup">
+                </span>
+              </div>
             </div>
             <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
-            </div>
-            <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
-            </div>
-            <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
+              <a href="{{ route('register') }}" class="d-flex align-items-center justify-content-center">
+                <span class="panels">  
+                  <img src="svg\anim\signup.svg" alt="signup">
+                </span>
+              </a>
             </div>
           </div>
           
@@ -82,40 +81,45 @@
           
           <div class="row px-5 py-2 align-items-center justify-content-around" style="width: 100%; height: 20%">
             <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
+              <a href="#" class="d-flex align-items-center justify-content-center">
+                <span class="panels">  
+                  <img src="svg\anim\abtUs.svg" alt="abtUs">
+                </span>
+              </a>
             </div>
             <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="panels" id="dwn-link">  
+                  <img src="svg\anim\dwnLink.svg" alt="dwnL">
+                </span>
+              </div>
             </div>
             <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
-            </div>
-            <div class="col-2 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
+              <a href="#" class="d-flex align-items-center justify-content-center">
+                <span class="panels">  
+                  <img src="svg\anim\ctnUs.svg" alt="ctnUs">
+                </span>
+              </a>
             </div>
           </div>
+
           <div class="row px-5 py-2 align-items-center justify-content-around" style="width: 100%; height: 20%">
             
-            <div class="col-3 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
-            </div>
+            <div class="col-3 justify-content-center align-items-center d-flex h-100"></div>
             
             <div class="col-3 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
+              <a href="#" class="d-flex align-items-center justify-content-center">
+                <span class="panels">  
+                  <img src="svg\anim\download.svg" alt="dwn">
+                </span>
+              </a>
             </div>
             
-            <div class="col-3 justify-content-center align-items-center d-flex h-100">
-              <a href="#"><button>click me!</button></a>
-            </div>
+            <div class="col-3 justify-content-center align-items-center d-flex h-100"></div>
 
           </div>
+
         </section>
-        
-        <section class="section-1"></section>
-        <section class="section-2"></section>
-        <section class="section-3"></section>
-        <section class="section-4"></section>
-        <section class="section-5"></section>
       </div>
 
 

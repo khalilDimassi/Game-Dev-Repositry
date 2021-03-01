@@ -77,6 +77,17 @@ span img{
     height: 100px;
 }
 
+#sign-link{
+    height: 400px;
+    padding-left: 50px;
+}
+
+#dwn-link img{
+    height: 225px;
+    padding-top: 30px;
+}
+
+
 @keyframes rotateRH {
     0% {
         transform: rotate(0deg) scale(1);
