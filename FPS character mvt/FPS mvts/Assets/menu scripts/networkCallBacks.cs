@@ -7,7 +7,7 @@ public class networkCallBacks : GlobalEventListener
 
     public override void SceneLoadLocalDone(string scene, IProtocolToken ipt)
     {
-        var SpawnPos = new Vector3(Random.Range(-8, 8), 2, Random.Range(-8, 8));
+        var SpawnPos = new Vector3(Random.Range(-8, 8), 1, Random.Range(-8, 8));
 
         BoltNetwork.Instantiate(spherePrefab, SpawnPos, Quaternion.identity);
 
