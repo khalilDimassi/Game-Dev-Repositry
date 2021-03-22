@@ -174,6 +174,29 @@
       "Name": "customSphereS",
       "Guid": "f097ab18-0ce9-40b2-b9e6-1c4565df612d",
       "Groups": []
+    },
+    {
+      "$type": "Bolt.Compiler.EventDefinition, bolt.compiler",
+      "Properties": [
+        {
+          "Name": "joinLog",
+          "Enabled": true,
+          "Expanded": true,
+          "ReplicationMode": 1,
+          "Priority": 1,
+          "PropertyType": {
+            "$type": "Bolt.Compiler.PropertyTypeString, bolt.compiler",
+            "MaxLength": 1
+          },
+          "AssetSettings": {
+            "$type": "Bolt.Compiler.PropertyEventSettings, bolt.compiler"
+          }
+        }
+      ],
+      "GlobalSenders": 1,
+      "Name": "playerJoinedEvent",
+      "Guid": "07bc9b8d-ffd6-4355-b69a-b3fede0a59eb",
+      "Groups": []
     }
   ],
   "ActiveGroup": "Everything"
