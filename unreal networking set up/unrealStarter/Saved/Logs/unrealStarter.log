@@ -4834,3 +4834,45 @@ Make sure 'FirstPersonCharacter_C' has been compiled for  Sqdf
 [2021.03.22-16.09.50:338][509]LogPlayLevel: Display: Destroying online subsystem :Context_66
 [2021.03.22-16.09.50:338][509]LogPlayLevel: Display: Destroying online subsystem :Context_65
 [2021.03.22-16.09.50:339][509]LogPlayLevel: Display: Destroying online subsystem :Context_64
+[2021.03.22-16.15.58:624][546]BlueprintLog: New page: Compile BPI_MPCharacter
+[2021.03.22-16.15.58:683][546]LogUObjectHash: Compacting FUObjectHashTables data took   6.41ms
+[2021.03.22-16.17.28:695][515]BlueprintLog: New page: Compile FirstPersonCharacter
+[2021.03.22-16.17.28:896][515]LogUObjectHash: Compacting FUObjectHashTables data took   8.65ms
+[2021.03.22-16.17.37:141][692]LogUObjectHash: Compacting FUObjectHashTables data took   5.30ms
+[2021.03.22-16.17.37:172][692]LogSavePackage: Moving 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/FirstPersonExampleMap4B3F073C42F5DDCE06A5A6A65D390D3F.tmp' to 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Content/FirstPersonBP/Maps/FirstPersonExampleMap.umap'
+[2021.03.22-16.17.38:193][692]LogSavePackage: Moving 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/FirstPersonExampleMap_BuiltData3665239F4F5CD902041C7FB5510EC745.tmp' to 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Content/FirstPersonBP/Maps/FirstPersonExampleMap_BuiltData.uasset'
+[2021.03.22-16.17.38:218][692]AssetCheck: New page: Asset Save: multiple assets
+[2021.03.22-16.17.38:218][692]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/FirstPersonBP/Maps/FirstPersonExampleMap_BuiltData.FirstPersonExampleMap_BuiltData
+[2021.03.22-16.17.38:218][692]LogContentValidation: Display: Validating World /Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap
+[2021.03.22-16.17.39:885][779]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/FirstPersonBP/Blueprints/FirstPersonProjectile.FirstPersonProjectile
+[2021.03.22-16.27.37:322][159]LogUObjectHash: Compacting FUObjectHashTables data took   5.81ms
+[2021.03.22-16.27.37:328][159]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPersonBP/Maps/FirstPersonExampleMap' took 0.069
+[2021.03.22-16.27.37:328][159]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/FirstPersonBP/Blueprints/FirstPersonCharacter] ([2] browsable assets)...
+[2021.03.22-16.27.37:344][159]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter]
+[2021.03.22-16.27.37:357][159]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter]
+[2021.03.22-16.27.37:357][159]OBJ SavePackage: Finished generating thumbnails for package [/Game/FirstPersonBP/Blueprints/FirstPersonCharacter]
+[2021.03.22-16.27.37:436][159]LogSavePackage: Moving 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/FirstPersonCharacter_Auto753E20B6047E74B27C8B7009F60E7F0E7.tmp' to 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/Autosaves/Game/FirstPersonBP/Blueprints/FirstPersonCharacter_Auto7.uasset'
+[2021.03.22-16.27.37:438][159]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/FirstPersonBP/Blueprints/FirstPersonProjectile] ([1] browsable assets)...
+[2021.03.22-16.27.37:450][159]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/FirstPersonBP/Blueprints/FirstPersonProjectile.FirstPersonProjectile]
+[2021.03.22-16.27.37:450][159]OBJ SavePackage: Finished generating thumbnails for package [/Game/FirstPersonBP/Blueprints/FirstPersonProjectile]
+[2021.03.22-16.27.37:472][159]LogSavePackage: Moving 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/FirstPersonProjectile_Auto723DBADB24A3CB40709ACB8B0F1A33172.tmp' to 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/Autosaves/Game/FirstPersonBP/Blueprints/FirstPersonProjectile_Auto7.uasset'
+[2021.03.22-16.27.37:473][159]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/FirstPersonBP/Blueprints/BPI_MPCharacter] ([2] browsable assets)...
+[2021.03.22-16.27.37:473][159]OBJ SavePackage: Finished generating thumbnails for package [/Game/FirstPersonBP/Blueprints/BPI_MPCharacter]
+[2021.03.22-16.27.37:482][159]LogSavePackage: Moving 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/BPI_MPCharacter_Auto7105AD6D343B2C7E723BBD4936D90FE99.tmp' to 'C:/Users/khalil/Projects/GameDevRep/unreal networking set up/unrealStarter/Saved/Autosaves/Game/FirstPersonBP/Blueprints/BPI_MPCharacter_Auto7.uasset'
+[2021.03.22-16.27.37:483][159]LogFileHelpers: Auto-saving content packages took 0.155
+[2021.03.22-16.42.34:471][724]LogUdpMessaging: Warning: UDP messaging encountered an error. Auto repair routine started for reinitialization
+[2021.03.22-16.42.36:301][730]FUdpSocketBuilder: Failed to subscribe UdpMessageMulticastSocket to multicast group 230.0.0.1 on interface 0.0.0.0
+[2021.03.22-16.42.36:301][730]FUdpSocketBuilder: Failed to create and initialize socket UdpMessageMulticastSocket (last error: 0)
+[2021.03.22-16.42.36:302][730]LogUdpMessaging: Warning: StartTransport failed to create multicast socket on 0.0.0.0:0, joined to 230.0.0.1:6666 with TTL 1
+[2021.03.22-16.42.36:422][730]LogUdpMessaging: Warning: UDP messaging encountered an error. Auto repair routine started for reinitialization
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BFE1009E3-470F-EE7A-D314-45833C7FA587%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.26.1-15228867%2B%2B%2BUE4%2BRelease-4.26&UserID=cac3c1da4a53ef512698538c51d46f13%7Cdfedc26377d6455ab7e19ee8c6e11ea3%7C310df3cb-2b6a-46f9-b695-1539d7b5f474&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: request failed, libcurl error: 56 (Failure when receiving data from the peer)
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x20d690cd870 [can pipeline])
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 1 (Re-using existing connection! (#2) with host datarouter.ol.epicgames.com)
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.0.233.147) port 443 (#2))
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 3 (We are completely uploaded and fine)
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 4 (OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054)
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: 0000020D8473C800: libcurl info message cache 7 (Closing connection 2)
+[2021.03.22-17.44.59:600][900]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BFE1009E3-470F-EE7A-D314-45833C7FA587%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.26.1-15228867%2B%2B%2BUE4%2BRelease-4.26&UserID=cac3c1da4a53ef512698538c51d46f13%7Cdfedc26377d6455ab7e19ee8c6e11ea3%7C310df3cb-2b6a-46f9-b695-1539d7b5f474&AppEnvironment=datacollector-binary&UploadType=eteventstream
