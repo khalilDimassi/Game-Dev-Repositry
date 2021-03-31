@@ -1,3 +1,8 @@
+body{
+    background-color: #0A0A0A;
+}
+
+
 span{
     position: absolute;
     z-index: 1;
