@@ -14,6 +14,10 @@ class Profile extends Model
         return $this -> belongsTo(User::class);
     }
 
+    public function show($id)
+    {
+        return view('profile.index')->with('id');
+    }
     
 }
 
