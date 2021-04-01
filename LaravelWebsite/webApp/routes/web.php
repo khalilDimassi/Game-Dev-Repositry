@@ -27,3 +27,6 @@ Route::get('/game/create', [App\Http\Controllers\GameController::class, 'create'
 Route::post('/game', [App\Http\Controllers\GameController::class, 'store']);
 
 Route::get('/profile/{id?}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
+
+
+Route::get('/testFb', [App\Http\Controllers\FirebaseController::class, 'index']);
