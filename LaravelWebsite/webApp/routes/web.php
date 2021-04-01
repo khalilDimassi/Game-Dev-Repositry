@@ -32,6 +32,8 @@ Auth::routes();
 Route::get('/game/create', [App\Http\Controllers\GameController::class, 'create'])->name('game.create');
 Route::post('/game', [App\Http\Controllers\GameController::class, 'store']);
 
-Route::get('/profile/{id}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
+Route::get('/profile/{id}', [App\Http\Controllers\ProfilesController::class, 'index'])
+                            ->name('profile.show')
+                            ->middleware('authenticatedFella');
 
 Route::get('/testFb', [App\Http\Controllers\FirebaseController::class, 'index']);
