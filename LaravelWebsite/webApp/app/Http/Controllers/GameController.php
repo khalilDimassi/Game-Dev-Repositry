@@ -24,7 +24,6 @@ class GameController extends Controller
             'result' => '',
             'date' => 'required',
             'matchLength' => ['required',],
-
         ]);
 
         auth()->user()->games()->create($data);

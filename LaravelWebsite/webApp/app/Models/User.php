@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use PhpParser\Node\Expr\Match_;
 use Symfony\Component\HttpKernel\Profiler\Profile;
+    
 
 class User extends Authenticatable
 {

@@ -23,19 +23,13 @@ class FirebaseController extends Controller
     $remoteConfig = $factory->createRemoteConfig();
     $cloudStorage = $factory->createStorage();
 
-    //$factory = (new Factory)->withServiceAccount(__DIR__.'\FirebaseKey.json');
-
     $database = $factory->createDatabase();
 
     $newPost = $database
 
         ->getReference('users')
 
-        ->push(['id' => '0',
-                'name' => 'khalil',
-                'username' => 'archy',
-                'email' => 'dimassi0khalil@gmail.com',
-                'name' => 'khalil',]);
+        ->push([ ]);
 
     echo"<pre>";
 

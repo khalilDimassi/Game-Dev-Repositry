@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'firebase' => [
+        'database_url' => 'https://player-accounts-0001-default-rtdb.europe-west1.firebasedatabase.app/',
+        'secret' => 'uRGgnxY7iYrm8fTPA6n4SLVI2nXpaQ9TWEFqGZ1h',
+    ]
+
 ];
