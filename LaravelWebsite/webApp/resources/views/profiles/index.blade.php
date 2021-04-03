@@ -20,7 +20,11 @@
     <div class="row pt-5 justify-content-center">     
         @foreach ($user->games as $game)
             <div class="col-5 p-3 border m-2" style="color: grey; text-align: center;">
-                <h1>Game {{$game -> result}}</h1>
+                
+                @if($game -> result == 1) <h1>Game won</h1>
+                @else <h1>Game lost</h1>
+                @endif
+
                 <h3>Game played on {{$game -> date}} and lasted {{$game -> matchLength}} minutes</h3>
             </div>
         @endforeach

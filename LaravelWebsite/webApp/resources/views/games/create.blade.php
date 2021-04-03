@@ -17,12 +17,12 @@
                     <label for="result" class="col-md-4 col-form-label text-md-right">{{ __('Game status: ') }}</label>
                     <div class="col-md-6">                                           
                         <label for="result" class="pl-4 pr-2 form-check-label">
-                            <input type="radio" name="result" class="form-check-input" value='won' checked>
+                            <input type="radio" name="result" class="form-check-input" value='1' checked>
                             <strong>won</strong>
                         </label>
 
                         <label for="result" class="pl-4 pr-2 form-check-label">
-                            <input type="radio" name="result" class="form-check-input"  value='lost' >
+                            <input type="radio" name="result" class="form-check-input"  value='0' >
                             <strong>lost</strong>
                         </label>
                     </div>
@@ -31,7 +31,8 @@
                 <div class="form-group row pb-2">
                     <label for="date, time" class="col-md-4 col-form-label text-md-right align-content">{{ __('Match start time: ') }}</label> 
                     <div class="col-md-6">
-                        <input class="form-control date-picker mb-2 @error('date') is-invalid @enderror" type="date" value="null" id="dateInput" name="date">             
+                        <input class="form-control date-picker mb-2 @error('date') is-invalid @enderror" type="date" value="null" id="dateInput" name="date">
+
                         @error('date')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

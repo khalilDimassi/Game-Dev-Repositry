@@ -18,6 +18,7 @@ class GameController extends Controller
     public function create(){
         return view('games.create');
     }
+    
     //
     public function store(){
         $data = request()->validate([

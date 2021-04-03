@@ -16,6 +16,7 @@ class CreateGamesTable extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+           
             $table->boolean('result');
             $table->dateTime('date');
             $table->time('matchLength');

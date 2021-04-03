@@ -16,12 +16,13 @@ class CreateProfilesTable extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+           
             $table->String('rank')->default("/svg/emptyLogo.svg");
             $table->integer('playedMatches')->nullable();
             $table->integer('wonMatches')->nullable();
             $table->float('winRate')->nullable();
+           
             $table->timestamps();
-
             $table->index('user_id');
         });
     }
