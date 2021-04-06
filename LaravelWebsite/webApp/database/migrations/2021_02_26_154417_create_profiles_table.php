@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateProfilesTable extends Migration
 {
@@ -24,6 +25,9 @@ class CreateProfilesTable extends Migration
            
             $table->timestamps();
             $table->index('user_id');
+
+            $table->integer('level')->default(0);
+            $table->integer('exp')->default(0);
         });
     }
 

@@ -21,6 +21,8 @@ class Profile extends Model
         'playedMatches',
         'wonMatches',
         'winRate',
+        'level',
+        'exp',
     ];
 
     public function user()
