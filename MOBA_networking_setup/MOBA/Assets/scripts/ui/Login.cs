@@ -15,6 +15,7 @@ public class Login : MonoBehaviour
         StartCoroutine(loggingIn());
     }
 
+   
     IEnumerator loggingIn()
     {
         WWWForm form = new WWWForm();
@@ -28,7 +29,7 @@ public class Login : MonoBehaviour
         if (www.text[0] == '0')
         {
             DbManager.username = nameField.text;
-            DbManager.userInfo = www.text.Split('\t')[1];
+            DbManager.userInfo = www.text.Split('\t');
             UnityEngine.SceneManagement.SceneManager.LoadScene(2); 
             
         }

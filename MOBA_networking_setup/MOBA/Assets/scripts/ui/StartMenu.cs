@@ -22,7 +22,9 @@ public class StartMenu : MonoBehaviour
 
     private void Awake()
     {
-       
+        usernameDisplay.text = DbManager.userInfo[11];
+        userLevelDisplay.text ="Level: " + DbManager.userInfo[9];
+        userExpDisplay.text ="Exp: " +  DbManager.userInfo[10];
     }
 
     public void goToLobby()
