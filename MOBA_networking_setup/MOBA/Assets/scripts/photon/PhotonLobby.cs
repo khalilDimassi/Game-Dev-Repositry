@@ -1,7 +1,5 @@
 ﻿using Photon.Pun;
 using Photon.Realtime;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +9,8 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
     public GameObject matchUpButton;
     public GameObject cancelButton;
+
+    public byte roomSize = 2;
 
     private void Awake()
     {
@@ -25,6 +25,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         Debug.Log("player has connected to photon master server");
         matchUpButton.SetActive(true); //player is connected, enabling match up button to search for rooms
     }
@@ -35,11 +36,12 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         cancelButton.SetActive(true);
 
         PhotonNetwork.JoinRandomRoom(); //picks random room of the available for the player to join
+        Debug.Log("Looking for rooms ...");
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {       
-        Debug.Log("tried to joing a random room and failed. there must be no open rooms available");
+        Debug.Log("tried to joing a random room and failed. there must be no open rooms available, " + message);
         createRoom(); 
     }
 
@@ -49,19 +51,20 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         Debug.Log("trying to create new Room");
 
         int randomRoomName = Random.Range(0, 10000);
-        RoomOptions roomOps = new RoomOptions() {IsVisible = true, IsOpen = true, MaxPlayers = 10}; //make new room options: visible, available and hosts 10 players at max
-        PhotonNetwork.CreateRoom("Room" + randomRoomName, roomOps); //create the room
-    }
-
-    public override void OnJoinedRoom()
-    {
-        Debug.Log("room joined successfully");
+        RoomOptions roomOps = new RoomOptions() {IsVisible = true, IsOpen = true, MaxPlayers = (byte)roomSize}; //make new room options: visible, available and hosts 10 players at max
+        PhotonNetwork.CreateRoom("Room n: " + randomRoomName, roomOps); //create the room
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
-        Debug.Log("tried to create room failed, there must be two rooms with the same name");
+        Debug.Log("tried to create room failed, there must be two rooms with the same name, " + message);
         createRoom(); //recreate room after failing
+    }
+
+
+    public override void OnJoinedRoom()
+    {
+        Debug.Log("room joined successfully");
     }
 
     public void onCancelBtnClicked()
