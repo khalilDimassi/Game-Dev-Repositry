@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class Login : MonoBehaviour
@@ -12,30 +13,29 @@ public class Login : MonoBehaviour
 
     public void callLogin()
     {
-        StartCoroutine(loggingIn());
+        StartCoroutine(loggingIn(nameField.text, passField.text));
     }
 
-   
-    IEnumerator loggingIn()
+    IEnumerator loggingIn(string username, string password)
     {
         WWWForm form = new WWWForm();
-        form.AddField("username", nameField.text);
-        form.AddField("password", passField.text);
+        form.AddField("username", username);
+        form.AddField("password", password);
 
-        
-        WWW www = new WWW("http://localhost/GameDevRep/MOBA_networking_setup/players_accounts/server_conn.php", form);
-        yield return www;
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/GameDevRep/MOBA_networking_setup/players_accounts/loginRequest.php", form))
+        {
+            yield return www.SendWebRequest();
 
-        if (www.text[0] == '0')
-        {
-            DbManager.username = nameField.text;
-            DbManager.userInfo = www.text.Split('\t');
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2); 
-            
-        }
-        else
-        {
-            Debug.Log("user Login failed. Error number #: " + www.text);
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("user Login failed. Error number #: " + www.downloadHandler.text);
+            }
+            else
+            {
+                DbManager.username = nameField.text;
+                DbManager.userInfo = www.downloadHandler.text.Split('\t');
+                UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            }
         }
     }
 

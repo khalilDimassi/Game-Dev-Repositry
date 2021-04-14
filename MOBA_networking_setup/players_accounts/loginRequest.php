@@ -20,7 +20,7 @@ $servername = "localhost";
    $name = $_POST["username"];
    $password = $_POST["password"];
 
-   //check if name exists
+   //check if username exists and pull out the password for auth
     $usernameCheckQuery = "SELECT username, id, password FROM users WHERE username = '" . $name ."';";
     $usernameCheck = mysqli_query($conn, $usernameCheckQuery) or die("2: username check failed.");
 
