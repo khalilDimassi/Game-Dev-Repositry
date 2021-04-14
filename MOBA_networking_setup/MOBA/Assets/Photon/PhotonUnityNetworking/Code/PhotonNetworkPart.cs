@@ -2543,5 +2543,10 @@ namespace Photon.Pun
                 PhotonNetwork.NetworkingClient.ConnectToRegionMaster(regionHandler.BestRegion.Code);
             }
         }
+
+        public static void Instantiate(string v, Vector3 pos, float rot)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
