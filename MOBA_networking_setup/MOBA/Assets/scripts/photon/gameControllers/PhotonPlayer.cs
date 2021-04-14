@@ -30,10 +30,11 @@ public class PhotonPlayer : MonoBehaviour
                 int spawnPicker = PV.OwnerActorNr - 1;
                 if (PV.IsMine)
                 {
-                    myAvatar = PhotonNetwork.Instantiate(Path.Combine("playerFiles", "redAvatar"),
+                    myAvatar = PhotonNetwork.Instantiate(Path.Combine("playerFiles", GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name),
                                                          GameSetup.GS.spawnPointsTeam1[0].position,
                                                          GameSetup.GS.spawnPointsTeam1[0].rotation,
                                                          0);
+                    Debug.LogError(GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name + "//" + GamePreps.PI.selectedCharacter.ToString());
                 }
             }
             else
@@ -41,10 +42,11 @@ public class PhotonPlayer : MonoBehaviour
                 int spawnPicker = PV.OwnerActorNr - 1;
                 if (PV.IsMine)
                 {
-                    myAvatar = PhotonNetwork.Instantiate(Path.Combine("playerFiles", "blueAvatar"),
+                    myAvatar = PhotonNetwork.Instantiate(Path.Combine("playerFiles", GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name),
                                                          GameSetup.GS.spawnPointsTeam2[0].position,
                                                          GameSetup.GS.spawnPointsTeam2[0].rotation,
                                                          0);
+                    Debug.LogError(GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name + "//" + GamePreps.PI.selectedCharacter.ToString());
                 }
             }
         }

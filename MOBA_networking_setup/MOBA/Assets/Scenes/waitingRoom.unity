@@ -1738,7 +1738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7cda81b19212341a6ecb9ba33bb418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplayerSceneIndex: 5
+  multiplayerSceneIndex: 4
   lobbySceneIndex: 3
   minPlayerCountToStart: 2
   playerCounterDisplay: {fileID: 1015961200}
