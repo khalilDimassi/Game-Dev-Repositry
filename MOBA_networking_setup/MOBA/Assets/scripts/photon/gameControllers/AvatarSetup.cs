@@ -8,8 +8,12 @@ public class AvatarSetup : MonoBehaviour
     private PhotonView PV;
     public int charaterValue;
     public GameObject myCharacter;
-    private GameObject cam;
 
+    public Camera myCamera;
+    public AudioListener myAL;
+
+    public int playerHealth = 100;
+    public int playerDmg = 25;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +23,10 @@ public class AvatarSetup : MonoBehaviour
         {
             PV.RPC("RPC_AddCharacter", RpcTarget.AllBuffered, GamePreps.PI.selectedCharacter, GamePreps.PI.selectedSkin);
         }
-
-        cam = GetComponentInChildren<Camera>().gameObject;
-
-        if (!PV.IsMine)
+        else
         {
-            cam.SetActive(false);
+            Destroy(myCamera);
+            Destroy(myAL);
         }
     }
     
