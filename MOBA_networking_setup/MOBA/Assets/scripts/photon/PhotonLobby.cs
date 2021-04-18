@@ -25,8 +25,13 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
-        Debug.Log("player has connected to photon master server");
+        if (PhotonNetwork.CloudRegion != "eu")
+        {
+            PhotonNetwork.Disconnect();
+            PhotonNetwork.ConnectUsingSettings();
+        }
+
+        PhotonNetwork.AutomaticallySyncScene = true; 
         matchUpButton.SetActive(true); //player is connected, enabling match up button to search for rooms
     }
 

@@ -1,20 +1,24 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using EasyUI.Dialogs;
+using System;
 
 public class Login : MonoBehaviour
 {
+    public int ProfileMenuSceneIndex;
+
     public InputField nameField;
     public InputField passField;
-
     public Button submitBtn;
 
-    public void callLogin()
-    {
-        StartCoroutine(loggingIn(nameField.text, passField.text));
-    }
+
+    [SerializeField] GameObject dialogCanvas;
+    [SerializeField] Text errorMsgDisplay;
+    [SerializeField] Button closeBtn;
+
 
     IEnumerator loggingIn(string username, string password)
     {
@@ -28,14 +32,44 @@ public class Login : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log("user Login failed. Error number #: " + www.downloadHandler.text);
+                Debug.Log("user Login failed. Error number " + www.downloadHandler.text);
             }
             else
             {
-                DbManager.username = nameField.text;
-                DbManager.userInfo = www.downloadHandler.text.Split('\t');
-                UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+                if (www.downloadHandler.text.Split('\t')[0] != "0")
+                {
+                    //displaying popup
+                    errorMsgDisplay.text = www.downloadHandler.text; ;
+                    dialogCanvas.SetActive(true);
+                }
+                else
+                {
+                    DbManager.userInfo = www.downloadHandler.text.Split('\t');
+                    DbManager.username = DbManager.userInfo[11];
+                    SceneManager.LoadScene(ProfileMenuSceneIndex);
+                }
             }
+        }
+    }
+
+    public void callLogin()
+    {
+        StartCoroutine(loggingIn(nameField.text, passField.text));
+        
+    }
+
+    public void hide()
+    {
+        dialogCanvas.SetActive(false);
+        //reset dialog (just in case)
+        errorMsgDisplay.text = "";
+    }
+
+    private void Awake()
+    {
+        if (dialogCanvas.activeSelf)
+        {
+            dialogCanvas.SetActive(false);
         }
     }
 

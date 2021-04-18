@@ -3,7 +3,8 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
+using UnityEngine.Networking;
 
 public class WaitingRoomController : MonoBehaviourPunCallbacks
 {
@@ -47,6 +48,28 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
     private float maxFullGameWaitTime;
 
     #endregion
+
+
+    void OnApplicationQuit()
+    {
+        StartCoroutine(disconnectOffGame(DbManager.username));
+    }
+
+    IEnumerator disconnectOffGame(string username)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", username);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/GameDevRep/MOBA_networking_setup/players_accounts/disconnect.php", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("user Login failed. Error number " + www.downloadHandler.text);
+            }
+        }
+    }
 
     private void Start()
     {
@@ -168,6 +191,12 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
 
     public void leaveRoom()
     {
+        if (PhotonNetwork.CurrentRoom == null)
+        {
+            Debug.Log("not in a room to excute leaveRoom()");
+            PhotonNetwork.LeaveLobby();
+            SceneManager.LoadScene(lobbySceneIndex);
+        }
         //leave the waiting room scene
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene(lobbySceneIndex);

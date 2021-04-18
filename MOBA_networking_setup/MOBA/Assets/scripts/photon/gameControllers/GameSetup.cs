@@ -1,8 +1,8 @@
 ﻿using Photon.Pun;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class GameSetup : MonoBehaviour
@@ -16,16 +16,32 @@ public class GameSetup : MonoBehaviour
     public Transform[] spawnPointsTeam1;
     public Transform[] spawnPointsTeam2;
 
+    void OnApplicationQuit()
+    {
+        StartCoroutine(disconnectOffGame(DbManager.username));
+    }
+
+    IEnumerator disconnectOffGame(string username)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", username);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/GameDevRep/MOBA_networking_setup/players_accounts/disconnect.php", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("user Login failed. Error number " + www.downloadHandler.text);
+            }
+        }
+    }
     public void Start()
     {
-        Debug.Log("enabled GS");
-
         if (GameSetup.GS == null)
         {
             GameSetup.GS = this;
         }
-
-        Debug.Log("instanciating playerFab");
         pFab = PhotonNetwork.Instantiate(Path.Combine("playerFiles", "playerPrefab"),
                                          gameObject.transform.position,
                                          gameObject.transform.rotation,

@@ -1,20 +1,18 @@
 ﻿using Photon.Pun;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 public class PhotonPlayer : MonoBehaviour
 {
+    #region variables
     public PhotonView PV;
     public GameObject myAvatar;
     public int myTeam;
-
+    #endregion
 
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        Debug.Log("pv assigned: " + PV.IsMine);
         if (PV.IsMine)
         {
             PV.RPC("RPC_GetTeam", RpcTarget.MasterClient);
@@ -25,33 +23,24 @@ public class PhotonPlayer : MonoBehaviour
     {
         if (myAvatar == null && myTeam != 0)
         {
-            if (myTeam == 1)
+            int spawnPicker = PV.OwnerActorNr - 1;
+            if (PV.IsMine)
             {
-                int spawnPicker = PV.OwnerActorNr - 1;
-                if (PV.IsMine)
-                {
-                    myAvatar = PhotonNetwork.Instantiate(Path.Combine("playerFiles", GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name),
-                                                         GameSetup.GS.spawnPointsTeam1[0].position,
-                                                         GameSetup.GS.spawnPointsTeam1[0].rotation,
-                                                         0);
-                    Debug.LogError(GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name + "//" + GamePreps.PI.selectedCharacter.ToString());
-                }
-            }
-            else
-            {
-                int spawnPicker = PV.OwnerActorNr - 1;
-                if (PV.IsMine)
-                {
-                    myAvatar = PhotonNetwork.Instantiate(Path.Combine("playerFiles", GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name),
-                                                         GameSetup.GS.spawnPointsTeam2[0].position,
-                                                         GameSetup.GS.spawnPointsTeam2[0].rotation,
-                                                         0);
-                    Debug.LogError(GamePreps.PI.allCharacters[GamePreps.PI.selectedCharacter].name + "//" + GamePreps.PI.selectedCharacter.ToString());
-                }
+                myAvatar = photonAvatarInstance((this.PV.OwnerActorNr - 1) / 2);
             }
         }
     }
 
+    private GameObject photonAvatarInstance(int spawnPoint)
+    {
+        Transform[] spawner = myTeam == 1 ? spawner = GameSetup.GS.spawnPointsTeam1 : GameSetup.GS.spawnPointsTeam2;
+
+        return PhotonNetwork.Instantiate(Path.Combine("playerFiles", "AvatarInstanciator"),
+                                         spawner[spawnPoint].position,
+                                         spawner[spawnPoint].rotation);
+    }
+
+    #region RPC functions
     [PunRPC]
     void RPC_GetTeam()
     {
@@ -65,4 +54,5 @@ public class PhotonPlayer : MonoBehaviour
     {
         myTeam = whichTeam;
     }
+    #endregion
 }

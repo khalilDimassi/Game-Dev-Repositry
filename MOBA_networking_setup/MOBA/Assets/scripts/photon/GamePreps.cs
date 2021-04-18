@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GamePreps : MonoBehaviour
 {
     public static GamePreps PI;
 
     public int selectedCharacter;
+    public int selectedSkin;
+
     public GameObject[] allCharacters;
+    public Color[] allSkins;
 
     private void OnEnable()
     {
@@ -17,7 +18,6 @@ public class GamePreps : MonoBehaviour
             Destroy(GamePreps.PI.gameObject);
             GamePreps.PI = this;
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start()
@@ -27,6 +27,13 @@ public class GamePreps : MonoBehaviour
         {
             selectedCharacter = 0;
             PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        }
+
+        if (PlayerPrefs.HasKey("selectedSkin")) selectedSkin = PlayerPrefs.GetInt("selectedSkin");
+        else
+        {
+            selectedSkin = 0;
+            PlayerPrefs.SetInt("selectedSkin", selectedSkin);
         }
     }
 
