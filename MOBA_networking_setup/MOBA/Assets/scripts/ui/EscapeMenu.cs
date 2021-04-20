@@ -31,17 +31,17 @@ public class EscapeMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && PV.IsMine)
-        {
-            if (pauseMenuOut)
-            {
-                hide();
-            }
-            else
-            {
-                show();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape) && PV.IsMine)
+        //{
+        //    if (pauseMenuOut)
+        //    {
+        //        hide();
+        //    }
+        //    else
+        //    {
+        //        show();
+        //    }
+        //}
 
         if (reminderTocken.activeInHierarchy)
         {

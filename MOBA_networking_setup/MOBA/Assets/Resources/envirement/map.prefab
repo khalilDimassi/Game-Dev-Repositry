@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2157091357512687100}
   m_Layer: 0
   m_Name: obs2
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 2157091357986313101}
   m_Layer: 0
   m_Name: obs
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 2157091358313182719}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1801,7 +1801,7 @@ GameObject:
   - component: {fileID: 2157091358609931710}
   m_Layer: 0
   m_Name: obs1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

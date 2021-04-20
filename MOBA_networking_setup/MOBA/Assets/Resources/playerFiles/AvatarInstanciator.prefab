@@ -84,10 +84,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4675367051881673832}
-  - component: {fileID: 4364003513579696684}
+  - component: {fileID: 6858838867977265351}
   - component: {fileID: 9104166953291892676}
   - component: {fileID: 4767305669289178267}
   - component: {fileID: 5957511319255498293}
+  - component: {fileID: 7490712810071280228}
+  - component: {fileID: 7953151660879624995}
+  - component: {fileID: 208327723141029287}
+  - component: {fileID: 4347237481833499755}
   m_Layer: 0
   m_Name: AvatarInstanciator
   m_TagString: Avatar
@@ -110,8 +114,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4364003513579696684
-CapsuleCollider:
+--- !u!143 &6858838867977265351
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -120,9 +124,13 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.21658137
-  m_Height: 1.7848039
-  m_Direction: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0.006206244, y: 0.9150474, z: 0}
 --- !u!114 &9104166953291892676
 MonoBehaviour:
@@ -142,7 +150,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 4347237481833499755}
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -179,6 +188,72 @@ MonoBehaviour:
   PV: {fileID: 9104166953291892676}
   avatarSetup: {fileID: 4767305669289178267}
   rayOrigin: {fileID: 6932236188125562860}
+  healthDisplay: {fileID: 1475742603150500700}
+--- !u!114 &7490712810071280228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556800597387088895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b4a7ec1a5c2b7448ddb7a914e434d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 208327723141029287}
+  mouseLook: {fileID: 7953151660879624995}
+--- !u!114 &7953151660879624995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556800597387088895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7267cf5e2d3570644b927c1bfa3d0877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensitivityX: 8
+  sensitivityY: 0.5
+  playerCamera: {fileID: 6932236188125562860}
+  xClamp: 85
+--- !u!114 &208327723141029287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556800597387088895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fe349f30f653d409531a91dbaf9b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 6858838867977265351}
+  speed: 11
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+  gravity: -30
+  jumpheight: 3.5
+--- !u!114 &4347237481833499755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556800597387088895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &6094180192761729183
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 
 --- !u!1 &6149623319319290750
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,4 +530,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10118f6c1be84ea49bc2478c893c45e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCharacter: {fileID: 2556800597387088895}

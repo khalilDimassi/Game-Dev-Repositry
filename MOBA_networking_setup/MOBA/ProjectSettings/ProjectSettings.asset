@@ -127,7 +127,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -610,9 +611,9 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_3D
-  metroPackageVersion: 
-  metroCertificatePath: C:\xampp\htdocs\GameDevRep\MOBA_networking_setup\MOBA\Assets\WSATestCertificate.pfx
+  metroPackageName: Template3D
+  metroPackageVersion: 1.0.0.0
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
@@ -631,8 +632,54 @@ PlayerSettings:
   metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
   metroSplashScreenUseBackgroundColor: 0
-  platformCapabilities: {}
-  metroTargetDeviceFamilies: {}
+  platformCapabilities:
+    WindowsStoreApps:
+      CodeGeneration: False
+      VideosLibrary: False
+      Location: False
+      HumanInterfaceDevice: False
+      Chat: False
+      Bluetooth: False
+      MusicLibrary: False
+      AllJoyn: False
+      PrivateNetworkClientServer: True
+      LowLevelDevices: False
+      InternetClientServer: True
+      OfflineMapsManagement: False
+      Objects3D: False
+      RemoteSystem: False
+      BlockedChatMessages: False
+      PhoneCall: False
+      UserDataTasks: False
+      Appointments: False
+      SystemManagement: False
+      SpatialPerception: False
+      Microphone: False
+      SharedUserCertificates: False
+      InputInjectionBrokered: False
+      PicturesLibrary: False
+      RemovableStorage: False
+      WebCam: False
+      VoipCall: False
+      GazeInput: False
+      UserAccountInformation: False
+      UserNotificationListener: False
+      PhoneCallHistoryPublic: False
+      PointOfService: False
+      RecordedCallsFolder: False
+      Contacts: False
+      Proximity: False
+      InternetClient: False
+      BackgroundMediaPlayback: False
+      EnterpriseAuthentication: False
+  metroTargetDeviceFamilies:
+    Desktop: False
+    Holographic: False
+    IoT: False
+    IoTHeadless: False
+    Mobile: False
+    Team: False
+    Xbox: False
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
@@ -685,7 +732,7 @@ PlayerSettings:
   projectName: 
   organizationId: 
   cloudEnabled: 0
-  enableNativePlatformBackendsForNewInputSystem: 0
-  disableOldInputManagerSupport: 0
+  enableNativePlatformBackendsForNewInputSystem: 1
+  disableOldInputManagerSupport: 1
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0
