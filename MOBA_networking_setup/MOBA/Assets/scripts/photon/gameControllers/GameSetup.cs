@@ -18,7 +18,10 @@ public class GameSetup : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        StartCoroutine(disconnectOffGame(DbManager.username));
+        if (DbManager.username != null)
+        {
+            StartCoroutine(disconnectOffGame(DbManager.username));
+        }
     }
 
     IEnumerator disconnectOffGame(string username)

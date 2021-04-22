@@ -54,7 +54,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Shoot",
+                    "name": "Attack",
                     "type": "Button",
                     "id": "7a54aa8f-8d26-412c-b9f3-68c2068f94b7",
                     "expectedControlType": "Button",
@@ -133,7 +133,7 @@
                     "name": "",
                     "id": "fde396cb-7121-4676-86e4-836fffbe8f8a",
                     "path": "<Keyboard>/leftCtrl",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Crouch",
@@ -144,7 +144,7 @@
                     "name": "",
                     "id": "126b8334-aa1b-4bd4-aa3d-c349e9e291eb",
                     "path": "<Keyboard>/leftShift",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Sprint",
@@ -180,7 +180,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

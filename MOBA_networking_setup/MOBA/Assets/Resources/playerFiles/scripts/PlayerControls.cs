@@ -67,7 +67,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Shoot"",
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""7a54aa8f-8d26-412c-b9f3-68c2068f94b7"",
                     ""expectedControlType"": ""Button"",
@@ -146,7 +146,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""fde396cb-7121-4676-86e4-836fffbe8f8a"",
                     ""path"": ""<Keyboard>/leftCtrl"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Crouch"",
@@ -157,7 +157,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""126b8334-aa1b-4bd4-aa3d-c349e9e291eb"",
                     ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Sprint"",
@@ -193,7 +193,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Shoot"",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -210,7 +210,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_GroundMovement_Sprint = m_GroundMovement.FindAction("Sprint", throwIfNotFound: true);
         m_GroundMovement_MouseX = m_GroundMovement.FindAction("MouseX", throwIfNotFound: true);
         m_GroundMovement_MouseY = m_GroundMovement.FindAction("MouseY", throwIfNotFound: true);
-        m_GroundMovement_Shoot = m_GroundMovement.FindAction("Shoot", throwIfNotFound: true);
+        m_GroundMovement_Attack = m_GroundMovement.FindAction("Attack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -266,7 +266,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_GroundMovement_Sprint;
     private readonly InputAction m_GroundMovement_MouseX;
     private readonly InputAction m_GroundMovement_MouseY;
-    private readonly InputAction m_GroundMovement_Shoot;
+    private readonly InputAction m_GroundMovement_Attack;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -277,7 +277,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Sprint => m_Wrapper.m_GroundMovement_Sprint;
         public InputAction @MouseX => m_Wrapper.m_GroundMovement_MouseX;
         public InputAction @MouseY => m_Wrapper.m_GroundMovement_MouseY;
-        public InputAction @Shoot => m_Wrapper.m_GroundMovement_Shoot;
+        public InputAction @Attack => m_Wrapper.m_GroundMovement_Attack;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -305,9 +305,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @MouseY.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
                 @MouseY.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
                 @MouseY.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
-                @Shoot.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
-                @Shoot.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
-                @Shoot.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
+                @Attack.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnAttack;
             }
             m_Wrapper.m_GroundMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -330,9 +330,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @MouseY.started += instance.OnMouseY;
                 @MouseY.performed += instance.OnMouseY;
                 @MouseY.canceled += instance.OnMouseY;
-                @Shoot.started += instance.OnShoot;
-                @Shoot.performed += instance.OnShoot;
-                @Shoot.canceled += instance.OnShoot;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
             }
         }
     }
@@ -345,6 +345,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
-        void OnShoot(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
     }
 }

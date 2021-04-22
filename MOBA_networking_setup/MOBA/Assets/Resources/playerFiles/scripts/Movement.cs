@@ -43,10 +43,8 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-
         moving();
         jumping();
-
     }
 
     private void jumping()
