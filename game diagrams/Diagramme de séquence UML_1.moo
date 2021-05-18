@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{6C97D885-41C2-4C20-B6E4-0A7763696ECB}" Label="" LastModificationDate="1621086461" Name="Diagramme de séquence UML_1" Objects="34" Symbols="49" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{6C97D885-41C2-4C20-B6E4-0A7763696ECB}" Label="" LastModificationDate="1621334896" Name="Diagramme de séquence UML_1" Objects="29" Symbols="38" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1958,7 +1958,7 @@ DISPNAME 0 Arial,8,U</a:FontList>
 <o:InteractionFragmentSymbol Id="o61">
 <a:CreationDate>1621077124</a:CreationDate>
 <a:ModificationDate>1621086461</a:ModificationDate>
-<a:RegionConditionPositionList>((2500,300),(2447,182))</a:RegionConditionPositionList>
+<a:RegionConditionPositionList>((2500,300),(2847,582))</a:RegionConditionPositionList>
 <a:Rect>((-18498,-17908), (24160,609))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>128</a:LineColor>
@@ -2291,11 +2291,11 @@ DISPNAME 0 Arial,8,U</a:FontList>
 </o:Message>
 <o:Message Id="o10">
 <a:ObjectID>9AD3FEFF-C948-427E-8B7E-1937FC01DAFA</a:ObjectID>
-<a:Name>Message_15</a:Name>
-<a:Code>Message_15</a:Code>
+<a:Name>send validation mail</a:Name>
+<a:Code>send_validation_mail</a:Code>
 <a:CreationDate>1621084426</a:CreationDate>
 <a:Creator>khalil</a:Creator>
-<a:ModificationDate>1621084426</a:ModificationDate>
+<a:ModificationDate>1621334896</a:ModificationDate>
 <a:Modifier>khalil</a:Modifier>
 <a:ControlFlow>R</a:ControlFlow>
 <c:Object1>
