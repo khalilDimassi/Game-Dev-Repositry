@@ -8,6 +8,7 @@ public class GamePreps : MonoBehaviour
     public int selectedSkin;
 
     public GameObject[] allCharacters;
+    public Avatar[] allAvatars;
     public Color[] allSkins;
 
     private void OnEnable()

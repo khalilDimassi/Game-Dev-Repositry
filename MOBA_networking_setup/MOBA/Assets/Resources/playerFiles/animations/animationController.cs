@@ -35,7 +35,7 @@ public class animationController : MonoBehaviour
     void Awake()
     {
         //refer to the avatar instanciator for the photonView component
-        PV = transform.parent.transform.parent.transform.parent.GetComponent<PhotonView>();
+        PV = GetComponentInParent<PhotonView>();
 
         //new input system listener instance
         input = new PlayerControls();

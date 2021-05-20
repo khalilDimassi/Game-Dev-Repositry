@@ -92,6 +92,9 @@ GameObject:
   - component: {fileID: 7953151660879624995}
   - component: {fileID: 208327723141029287}
   - component: {fileID: 4347237481833499755}
+  - component: {fileID: 1549939890463097640}
+  - component: {fileID: 2499666277814771793}
+  - component: {fileID: 8059760560341313604}
   m_Layer: 0
   m_Name: AvatarInstanciator
   m_TagString: Avatar
@@ -152,6 +155,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4347237481833499755}
+  - {fileID: 8059760560341313604}
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -232,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 6858838867977265351}
-  speed: 11
+  speed: 6
   groundMask:
     serializedVersion: 2
     m_Bits: 256
@@ -254,6 +258,80 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!95 &1549939890463097640
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556800597387088895}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7335dddb0f835b4b820ae737a45a8f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2499666277814771793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556800597387088895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e802cd014a799a84589e71374db117f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedLimit: 0
+  walkLimit: 1
+  runLimit: 2
+--- !u!114 &8059760560341313604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556800597387088895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 0
+  ShowParameterInspector: 0
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 2
+    Name: velocityX
+  - Type: 1
+    SynchronizeType: 2
+    Name: velocityZ
+  - Type: 1
+    SynchronizeType: 1
+    Name: turn
+  - Type: 4
+    SynchronizeType: 1
+    Name: crouching
+  - Type: 4
+    SynchronizeType: 1
+    Name: jump
+  - Type: 4
+    SynchronizeType: 2
+    Name: attacking
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
+  - SynchronizeType: 1
+    LayerIndex: 1
+  - SynchronizeType: 1
+    LayerIndex: 2
 --- !u!1 &6094180192761729183
 GameObject:
   m_ObjectHideFlags: 0

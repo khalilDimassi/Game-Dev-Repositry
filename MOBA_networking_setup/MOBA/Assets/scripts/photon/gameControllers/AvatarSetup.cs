@@ -39,11 +39,17 @@ public class AvatarSetup : MonoBehaviour
                                   transform.rotation,
                                   transform);
 
-        SkinnedMeshRenderer myRend = myCharacter.transform
+        /*
+         * SkinnedMeshRenderer myRend = myCharacter.transform
                                         .GetChild(0).transform
                                         .GetChild(0).transform
                                         .GetChild(1).GetComponent<SkinnedMeshRenderer>();
+        */
+
+        SkinnedMeshRenderer myRend = myCharacter.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
         myRend.material.color = GamePreps.PI.allSkins[whichSkin];
+
+        GetComponent<Animator>().avatar = GamePreps.PI.allAvatars[whichCharacter];
 
     }
 }

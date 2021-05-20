@@ -3337,8 +3337,11 @@ MonoBehaviour:
   selectedCharacter: 0
   selectedSkin: 0
   allCharacters:
-  - {fileID: 2174605814560468167, guid: 09bf0e09f471d7f4ea213b436354530b, type: 3}
-  - {fileID: 2743119540162131431, guid: d41a12379a5e5494993fe92ca3baed34, type: 3}
+  - {fileID: 2973940651656685265, guid: 49d9954ad28581e47add57079718e312, type: 3}
+  - {fileID: 7500286260405989650, guid: 3ba884634711a45488fa42c00cc448e0, type: 3}
+  allAvatars:
+  - {fileID: 9000000, guid: ba611839022e7b04592591daa7df1607, type: 2}
+  - {fileID: 9000000, guid: c8765e7b33d87714885dde3e5708dfed, type: 2}
   allSkins:
   - {r: 0, g: 0, b: 1, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
