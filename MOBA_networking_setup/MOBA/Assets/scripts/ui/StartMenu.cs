@@ -8,16 +8,15 @@ using UnityEngine.UI;
 public class StartMenu : MonoBehaviour
 {
     #region main UI buttons
-    public GameObject playBtn;
     public GameObject leaderBoardBtn;
     public GameObject rulesBtn;
     public GameObject ExitBtn;
+    public GameObject SelectBtn;
     #endregion
 
     #region Profile Details:
     public Text usernameDisplay;
     public Text userLevelDisplay;
-    public Text userExpDisplay;
     #endregion
 
     private void Awake()
@@ -30,7 +29,6 @@ public class StartMenu : MonoBehaviour
         {
             usernameDisplay.text = DbManager.userInfo[11];
             userLevelDisplay.text ="Level: " + DbManager.userInfo[9];
-            userExpDisplay.text ="Exp: " +  DbManager.userInfo[10];
         }
     }
 

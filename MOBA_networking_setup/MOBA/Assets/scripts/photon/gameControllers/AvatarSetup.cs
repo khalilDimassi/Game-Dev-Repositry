@@ -21,7 +21,7 @@ public class AvatarSetup : MonoBehaviour
         PV = GetComponent<PhotonView>();
         if (PV.IsMine)
         {
-            PV.RPC("RPC_AddCharacter", RpcTarget.AllBuffered, GamePreps.PI.selectedCharacter, GamePreps.PI.selectedSkin);
+            PV.RPC("RPC_AddCharacter", RpcTarget.AllBuffered, GamePreps.PI.selectedCharacter);
         }
         else
         {
@@ -31,23 +31,13 @@ public class AvatarSetup : MonoBehaviour
     }
     
     [PunRPC]
-    void RPC_AddCharacter(int whichCharacter, int whichSkin)
+    void RPC_AddCharacter(int whichCharacter)
     {
         charaterValue = whichCharacter;
         myCharacter = Instantiate(GamePreps.PI.allCharacters[whichCharacter],
                                   transform.position,
                                   transform.rotation,
                                   transform);
-
-        /*
-         * SkinnedMeshRenderer myRend = myCharacter.transform
-                                        .GetChild(0).transform
-                                        .GetChild(0).transform
-                                        .GetChild(1).GetComponent<SkinnedMeshRenderer>();
-        */
-
-        SkinnedMeshRenderer myRend = myCharacter.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
-        myRend.material.color = GamePreps.PI.allSkins[whichSkin];
 
         GetComponent<Animator>().avatar = GamePreps.PI.allAvatars[whichCharacter];
 

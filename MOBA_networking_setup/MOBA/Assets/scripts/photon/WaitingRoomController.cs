@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.Networking;
+using System.IO;
+using System.Collections.Generic;
 
 public class WaitingRoomController : MonoBehaviourPunCallbacks
 {
@@ -47,6 +49,17 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
     [SerializeField]
     private float maxFullGameWaitTime;
 
+    //display variables
+    [SerializeField]
+    public Text[] Team1dis;
+    [SerializeField]
+    public Text[] Team2dis;
+    GameObject playerDisplayer;
+
+    //Instance
+    public static WaitingRoomController WRC;
+    public int nextPlayerTeam;
+
     #endregion
 
 
@@ -73,8 +86,10 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+
         #region intializing variables
         //initialize variables
+        if (WaitingRoomController.WRC == null) WaitingRoomController.WRC = this;
         myPhotonView = GetComponent<PhotonView>();
         fullGameTimer = maxFullGameWaitTime;
         notFullGameTimer = maxWaitTime;
@@ -82,6 +97,11 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
         #endregion
 
         playerCounterUpdate();
+
+        playerDisplayer = PhotonNetwork.Instantiate(Path.Combine("playerFiles", "playerDisplayer"),
+                                                    gameObject.transform.position,
+                                                    Quaternion.identity,
+                                                    0);
     }
 
     void playerCounterUpdate()
@@ -108,26 +128,16 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
         }
     }
 
+
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         //called whenever new player join the room
         playerCounterUpdate();
 
         //send master client countdow timer to sync timer for all players
-        if (PhotonNetwork.IsMasterClient)   myPhotonView.RPC("RPC_SendTimer", RpcTarget.Others, timerToStartGame);
+        if (PhotonNetwork.IsMasterClient) myPhotonView.RPC("RPC_SendTimer", RpcTarget.Others, timerToStartGame);
     }
 
-    [PunRPC]
-    private void RPC_SendTimer(float timeIn)
-    {
-        //RPC for syncing the countdown timer to those who join after the timer started the countdown
-        timerToStartGame = timeIn;
-        notFullGameTimer = timeIn;
-        if (timeIn < fullGameTimer)
-        {
-            fullGameTimer = timeIn;
-        }
-    }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
@@ -167,7 +177,7 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
         if (timerToStartGame <= 0)
         {
             if (startingGame) return;
-            StartGame();
+            //StartGame();
         }
     }
 
@@ -200,6 +210,31 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
         //leave the waiting room scene
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene(lobbySceneIndex);
+    }
+
+
+    public void updateTeam()
+    {
+        if (nextPlayerTeam == 1)
+        {
+            nextPlayerTeam = 2;
+        }
+        else
+        {
+            nextPlayerTeam = 1;
+        }
+    }
+
+    [PunRPC]
+    private void RPC_SendTimer(float timeIn)
+    {
+        //RPC for syncing the countdown timer to those who join after the timer started the countdown
+        timerToStartGame = timeIn;
+        notFullGameTimer = timeIn;
+        if (timeIn < fullGameTimer)
+        {
+            fullGameTimer = timeIn;
+        }
     }
 
 }

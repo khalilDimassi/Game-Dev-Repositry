@@ -5,11 +5,9 @@ public class GamePreps : MonoBehaviour
     public static GamePreps PI;
 
     public int selectedCharacter;
-    public int selectedSkin;
 
-    public GameObject[] allCharacters;
     public Avatar[] allAvatars;
-    public Color[] allSkins;
+    public GameObject[] allCharacters;
 
     private void OnEnable()
     {
@@ -28,13 +26,6 @@ public class GamePreps : MonoBehaviour
         {
             selectedCharacter = 0;
             PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        }
-
-        if (PlayerPrefs.HasKey("selectedSkin")) selectedSkin = PlayerPrefs.GetInt("selectedSkin");
-        else
-        {
-            selectedSkin = 0;
-            PlayerPrefs.SetInt("selectedSkin", selectedSkin);
         }
     }
 

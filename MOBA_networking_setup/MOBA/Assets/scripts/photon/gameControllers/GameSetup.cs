@@ -41,10 +41,7 @@ public class GameSetup : MonoBehaviour
     }
     public void Start()
     {
-        if (GameSetup.GS == null)
-        {
-            GameSetup.GS = this;
-        }
+        if (GameSetup.GS == null) GameSetup.GS = this;
         pFab = PhotonNetwork.Instantiate(Path.Combine("playerFiles", "playerPrefab"),
                                          gameObject.transform.position,
                                          gameObject.transform.rotation,

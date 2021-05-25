@@ -1725,8 +1725,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1805585232}
-  - component: {fileID: 1805585231}
   - component: {fileID: 1805585233}
+  - component: {fileID: 1805585231}
   m_Layer: 0
   m_Name: waitingRoomController
   m_TagString: Untagged
@@ -1751,8 +1751,21 @@ MonoBehaviour:
   minPlayerCountToStart: 2
   playerCounterDisplay: {fileID: 1015961200}
   timerToStartDisplay: {fileID: 1721182152}
-  maxWaitTime: 25
+  maxWaitTime: 30
   maxFullGameWaitTime: 5
+  Team1dis:
+  - {fileID: 1357433043}
+  - {fileID: 1489784451}
+  - {fileID: 1869334604}
+  - {fileID: 1242010238}
+  - {fileID: 1330283127}
+  Team2dis:
+  - {fileID: 748982634}
+  - {fileID: 2029094384}
+  - {fileID: 1306436671}
+  - {fileID: 1647243954}
+  - {fileID: 117124285}
+  nextPlayerTeam: 0
 --- !u!4 &1805585232
 Transform:
   m_ObjectHideFlags: 0

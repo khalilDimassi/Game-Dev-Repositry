@@ -2,9 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChampSelectController : MonoBehaviour
 {
+    public Button SelectBtn;
+
+    [SerializeField]
+    private Image Displayer;
+    [SerializeReference]
+    private Text NameDisplayer;
+
+    [SerializeField]
+    private Sprite[] CharsDisplay;
+    private String[] Names = new string[] {"Ely", "Elitta", };
+
+    private int pickedOne;
+
     public void onPickCharacter(int whichCharacter)
     {
         if (GamePreps.PI != null)
@@ -12,13 +26,20 @@ public class ChampSelectController : MonoBehaviour
             GamePreps.PI.selectedCharacter = whichCharacter;
             PlayerPrefs.SetInt("selectedCharacter", whichCharacter);
         }
+
+        pickedOne = whichCharacter;
     }
-    public void onPickSkin(int whichskin)
+
+    public void onSelectCharacter()
     {
-        if (GamePreps.PI != null)
-        {         
-            GamePreps.PI.selectedSkin = whichskin;
-            PlayerPrefs.SetInt("selectedSkin", whichskin);
-        }
+        Color cr1 = NameDisplayer.GetComponentInParent<Image>().color;
+        cr1.a = 1;
+        NameDisplayer.GetComponentInParent<Image>().color = cr1;
+        NameDisplayer.text = Names[pickedOne];
+
+        Displayer.sprite = CharsDisplay[pickedOne];
+        Color cr2 = Displayer.color;
+        cr2.a = 1;
+        Displayer.color = cr2;
     }
 }
