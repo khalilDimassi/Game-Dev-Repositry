@@ -44,7 +44,7 @@
                             <div class="full">
                                 <div class="center-desk">
                                     <div class="logo">
-                                        <a href="index.html"><img src="{{ asset('svg/images/logo.png') }}" alt="#" /></a>
+                                        <a href="index.html"> <h1> ISSAT SO</h1 > </a>
                                     </div>
                                 </div>
                             </div>
@@ -277,15 +277,6 @@
         <div class="footer ">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <h2>Newsletter</h2>
-                    </div>
-                    <div class="col-md-10 offset-md-1">
-                        <form class="news">
-                            <input class="newslatter" placeholder="Enter Your Email" type="text" name="Enter Your Email">
-                            <button class="submit">Subscribe</button>
-                        </form>
-                    </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 ">

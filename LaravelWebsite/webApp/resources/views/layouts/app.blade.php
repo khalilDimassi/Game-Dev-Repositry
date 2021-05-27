@@ -18,14 +18,16 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- style css -->
+    <link rel="stylesheet" href="{{ asset('css/custom/style.css') }}">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mr-2 ml-3">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm mr-2 ml-3">
 
                 <a class="navbar-brand d-flex" href="{{ url('/welcome') }}">
                     <div><img src="/svg/tempLogo.svg" class="pr-3" style="height: 20px; border-right: 1px solid #000"></div>
-                    <div class="pl-3">Game Name Here</div>
+                    <div class="pl-3">Era's End</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,7 +37,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto pl-5 ml-2">
                             <li class="nav-item p-2">
-                                <a class="nav-link" href="#">About-us</a>
+                                <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item p-2">
                                 <a class="nav-link" href="#">Contact-us</a>
@@ -55,7 +57,7 @@
                             
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Get Started') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Sign up') }}</a>
                                 </li>
                             @endif
                         @else
@@ -91,6 +93,49 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+         <!--  footer -->
+    <footer>
+        <div class="footer ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <ul class="social_link">
+                                        <li><a href="#"><img src="{{ asset('svg/icon/fb.png') }}"></a></li>
+                                        <li><a href="#"><img src="{{ asset('svg/icon/tw.png') }}"></a></li>
+                                        <li><a href="#"><img src="{{ asset('svg/icon/lin(2).png') }}"></a></li>
+                                        <li><a href="#"><img src="{{ asset('svg/icon/instagram.png') }}"></a></li>
+                                    </ul>
+                                    <a href="index.html"> <img src="{{ asset('svg/images/logo.png') }}" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3 class="ctsUs">Contact us </h3>
+                                    <ul class="loca">
+                                        <li class="ml-5">
+                                            <a href="#"><img src="{{ asset('svg/icon/loc.png') }}" alt="#" /></a>London 145
+                                            <br>United Kingdom </li>
+                                        <li class="ml-5">
+                                            <a href="#"><img src="{{ asset('svg/icon/email.png') }}" alt="#" /></a>demo@gmail.com </li>
+                                        <li class="ml-5">
+                                            <a href="#"><img src="{{ asset('svg/icon/call.png') }}" alt="#" /></a>+12586954775 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
     </div>
 </body>
 </html>
