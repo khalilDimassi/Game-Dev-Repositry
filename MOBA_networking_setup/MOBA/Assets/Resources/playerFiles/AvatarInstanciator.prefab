@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 208327723141029287}
-  mouseLook: {fileID: 7953151660879624995}
+  mouseMove: {fileID: 7953151660879624995}
 --- !u!114 &7953151660879624995
 MonoBehaviour:
   m_ObjectHideFlags: 0

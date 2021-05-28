@@ -177,7 +177,7 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
         if (timerToStartGame <= 0)
         {
             if (startingGame) return;
-            //StartGame();
+            StartGame();
         }
     }
 

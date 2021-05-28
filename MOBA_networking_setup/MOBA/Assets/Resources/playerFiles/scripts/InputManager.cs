@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
 
     #region variables
     [SerializeField] Movement movement;
-    [SerializeField] MouseLook mouseLook;
+    [SerializeField] MouseMove mouseMove;
    
     PlayerControls controls;
     PlayerControls.GroundMovementActions groundMvts;
@@ -47,6 +47,6 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         movement.receiveInput(horizentalInput);
-        mouseLook.recriveInput(mouseInput);
+        mouseMove.recriveInput(mouseInput);
     }
 }
