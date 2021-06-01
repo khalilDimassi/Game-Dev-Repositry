@@ -18,7 +18,7 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
            
-            $table->String('rank')->default("/svg/emptyLogo.svg");
+            $table->String('rank')->default("rabbit");
             $table->integer('playedMatches')->nullable();
             $table->integer('wonMatches')->nullable();
             $table->float('winRate')->nullable();

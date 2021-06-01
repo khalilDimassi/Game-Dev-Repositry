@@ -75,7 +75,7 @@ class RegisterController extends Controller
 
         Profile::create([
             'user_id' => ($user -> id),
-            'rank' => "/svg/emptyLogo.svg",
+            'rank' => "rabbit",
             'playedMatches' => 0,
             'wonMatches' => 0,
             'winRate' => 0.0,

@@ -44,20 +44,25 @@
                             <div class="full">
                                 <div class="center-desk">
                                     <div class="logo">
-                                        <a href="index.html"> <h1> ISSAT SO</h1 > </a>
+                                        <a href="index.html">  </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                            
-                            <ul class="top_icon">
-                                <li class="button_login"> <a href="{{ route('login') }}">Login</a> </li>
-                                <li> <a href="{{ route('register') }}">Signup</a> </li>
-                                <li class="mean-last">
-                                  <a href="#"><img src="{{ asset('svg/images/search_icon.png') }}" alt="#" /></a>
-                                </li>
-                            </ul>
+                            @if (Route::has('login'))
+                                <ul class="top_icon">
+                                    @auth
+                                        <li class="button_login"> <a href="{{route('profile.show', [Auth::user()->id])}}">Profile</a> </li>
+                                    @else
+                                        <li class="button_login"> <a href="{{ route('login') }}">Log in</a></li>
+                                        @if (Route::has('register'))
+                                            <li class="button_login"> <a href="{{ route('register') }}">Register</a></li>
+                                        @endif
+                                    @endauth
+                                    <li class="mean-last"><a href="#"><img src="{{ asset('svg/images/search_icon.png') }}" alt="#" /></a></li>
+                                </ul>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -65,7 +70,7 @@
             <!-- end header inner -->
 
             <!-- end header -->
-            <section class="slider_section">
+            <section class="slider_section" style="background-image: url({{ asset('svg/images/banner2.png') }});">
                 <div class="banner_main">
 
                     <div class="container-fluid">
@@ -93,17 +98,19 @@
                                     <a href="#">download</a>
                                 </div>
                             </div>
-                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
-                                <div class="text-img">
-                                   <figure><img src="{{ asset('svg/images/img.png') }}" alt="#"/></figure>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
-        
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
            </section>
         </div>
     </header>
@@ -133,7 +140,6 @@
                             <div class="Games">
                                 <h3>Angry Birds</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
-                                <a href="#">Free Download</a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +158,6 @@
                             <div class="Games">
                                 <h3>Sanke</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
-                                <a href="#">Free Download</a>
                             </div>
                         </div>
                     </div>
@@ -171,7 +176,6 @@
                             <div class="Games">
                                 <h3>Cricket</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
-                                <a href="#">Free Download</a>
                             </div>
                         </div>
                     </div>

@@ -21,13 +21,14 @@
     <!-- style css -->
     <link rel="stylesheet" href="{{ asset('css/custom/style.css') }}">
 </head>
-<body>
+<body class="appBody">
+    <img src="{{ asset('svg/images/loginBg.png') }}" style="position: absolute; width: 100%; height: 100%">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm mr-2 ml-3">
 
                 <a class="navbar-brand d-flex" href="{{ url('/welcome') }}">
                     <div><img src="/svg/tempLogo.svg" class="pr-3" style="height: 20px; border-right: 1px solid #000"></div>
-                    <div class="pl-3">Era's End</div>
+                    <div class="pl-3" style="color: black; font-size: 20px;">Era's End</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -37,10 +38,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto pl-5 ml-2">
                             <li class="nav-item p-2">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" style="color: white;" href="#">Home</a>
                             </li>
                             <li class="nav-item p-2">
-                                <a class="nav-link" href="#">Contact-us</a>
+                                <a class="nav-link" style="color: white;" href="#">Contact-us</a>
                             </li>
                     </ul>
 
@@ -51,13 +52,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" style="color: white;" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
                             
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Sign up') }}</a>
+                                    <a class="nav-link" style="color: white;" href="{{ route('register') }}">{{ __('Sign up') }}</a>
                                 </li>
                             @endif
                         @else
@@ -90,13 +91,17 @@
 
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="margin-top: 200px">
             @yield('content')
         </main>
 
          <!--  footer -->
-    <footer>
-        <div class="footer ">
+    <footer style="
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;">
+        <div class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
@@ -109,7 +114,7 @@
                                         <li><a href="#"><img src="{{ asset('svg/icon/lin(2).png') }}"></a></li>
                                         <li><a href="#"><img src="{{ asset('svg/icon/instagram.png') }}"></a></li>
                                     </ul>
-                                    <a href="index.html"> <img src="{{ asset('svg/images/logo.png') }}" alt="logo"></a>
+                                    <a href="index.html"> <img src="{{ asset('svg/issat_logo.png') }}" alt="logo" style="width: 75%; padding-bottom: 30px;"></a>
                                 </div>
                             </div>
                             <div class="col-lg-9 col-md-6 col-sm-6 ">
@@ -117,12 +122,11 @@
                                     <h3 class="ctsUs">Contact us </h3>
                                     <ul class="loca">
                                         <li class="ml-5">
-                                            <a href="#"><img src="{{ asset('svg/icon/loc.png') }}" alt="#" /></a>London 145
-                                            <br>United Kingdom </li>
+                                            <a href="#"><img src="{{ asset('svg/icon/loc.png') }}" alt="#" /></a> Sousse <br> Tunisia </li>
+                                        <li class="ml-5"> 
+                                            <a href="#"><img src="{{ asset('svg/icon/email.png') }}" alt="#" /></a>Eras.End@gmail.com </li>
                                         <li class="ml-5">
-                                            <a href="#"><img src="{{ asset('svg/icon/email.png') }}" alt="#" /></a>demo@gmail.com </li>
-                                        <li class="ml-5">
-                                            <a href="#"><img src="{{ asset('svg/icon/call.png') }}" alt="#" /></a>+12586954775 </li>
+                                            <a href="#"><img src="{{ asset('svg/icon/call.png') }}" alt="#" /></a>+216 25 775 569</li>
                                     </ul>
                                 </div>
                             </div>
