@@ -289,8 +289,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7500286260405992876}
-  - component: {fileID: 7500286260405992173}
-  - component: {fileID: 8006811204706030313}
   m_Layer: 0
   m_Name: ybot
   m_TagString: Untagged
@@ -315,40 +313,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &7500286260405992173
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7500286260405989650}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: f3e440d25a88b9742af8ef45294040d7, type: 3}
-  m_Controller: {fileID: 9100000, guid: f7335dddb0f835b4b820ae737a45a8f2, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8006811204706030313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7500286260405989650}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e802cd014a799a84589e71374db117f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedLimit: 0.5
-  walkLimit: 1
-  runLimit: 2
 --- !u!1 &7500286260405989682
 GameObject:
   m_ObjectHideFlags: 0

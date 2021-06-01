@@ -128,7 +128,6 @@ public class WaitingRoomController : MonoBehaviourPunCallbacks
         }
     }
 
-
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         //called whenever new player join the room
