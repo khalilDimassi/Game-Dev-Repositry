@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{6C97D885-41C2-4C20-B6E4-0A7763696ECB}" Label="" LastModificationDate="1621334896" Name="Diagramme de séquence UML_1" Objects="29" Symbols="38" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{6C97D885-41C2-4C20-B6E4-0A7763696ECB}" Label="" LastModificationDate="1622441267" Name="Diagramme de séquence UML_1" Objects="29" Symbols="38" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -981,11 +981,11 @@ NameToCode=No</a:ModelOptionsText>
 <c:SequenceDiagrams>
 <o:SequenceDiagram Id="o5">
 <a:ObjectID>83A4506A-33FB-4C94-94C9-7B5ECAA0C62D</a:ObjectID>
-<a:Name>DiagrammeSequence_1</a:Name>
-<a:Code>DiagrammeSequence_1</a:Code>
+<a:Name>DiagrammeSequence Register</a:Name>
+<a:Code>DiagrammeSequence_Register</a:Code>
 <a:CreationDate>1620691627</a:CreationDate>
 <a:Creator>khalil</a:Creator>
-<a:ModificationDate>1621084426</a:ModificationDate>
+<a:ModificationDate>1622441261</a:ModificationDate>
 <a:Modifier>khalil</a:Modifier>
 <a:DisplayPreferences>[DisplayPreferences]
 
@@ -996,17 +996,17 @@ Adjust to text=Yes
 Snap Grid=No
 Constrain Labels=Yes
 Display Grid=No
-Show Page Delimiter=Yes
-Grid size=0
+Show Page Delimiter=No
+Grid size=800
 Graphic unit=2
-Window color=255, 255, 255
+Window color=255 255 255
 Background image=
 Background mode=8
 Watermark image=
 Watermark mode=8
 Show watermark on screen=No
 Gradient mode=0
-Gradient end color=255, 255, 255
+Gradient end color=255 255 255
 Show Swimlane=No
 SwimlaneVert=Yes
 TreeVert=No
@@ -1029,16 +1029,16 @@ Shortcut ExtIncludeModl=Yes
 EObjShowStrn=Yes
 ExtendedObject.Comment=No
 ExtendedObject.IconPicture=No
-ExtendedObject_SymbolLayout=
+ExtendedObject_SymbolLayout=&lt;Form&gt;[CRLF] &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Nom de l&amp;#39;objet&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF] &lt;Separator Name=&quot;Séparateur&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Commentaire&quot; Attribute=&quot;Comment&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;LEFT&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;StandardAttribute Name=&quot;Icône&quot; Attribute=&quot;IconPicture&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF]&lt;/Form&gt;
 ELnkShowStrn=Yes
 ELnkShowName=Yes
-ExtendedLink_SymbolLayout=
+ExtendedLink_SymbolLayout=&lt;Form&gt;[CRLF] &lt;Form Name=&quot;Centre&quot; &gt;[CRLF]  &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF]  &lt;StandardAttribute Name=&quot;Nom&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;/Form&gt;[CRLF] &lt;Form Name=&quot;Source&quot; &gt;[CRLF] &lt;/Form&gt;[CRLF] &lt;Form Name=&quot;Destination&quot; &gt;[CRLF] &lt;/Form&gt;[CRLF]&lt;/Form&gt;
 FileObject.Stereotype=No
 FileObject.DisplayName=Yes
 FileObject.LocationOrName=No
 FileObject.IconPicture=No
 FileObject.IconMode=Yes
-FileObject_SymbolLayout=
+FileObject_SymbolLayout=&lt;Form&gt;[CRLF] &lt;StandardAttribute Name=&quot;Stéréotype&quot; Attribute=&quot;Stereotype&quot; Prefix=&quot;&amp;lt;&amp;lt;&quot; Suffix=&quot;&amp;gt;&amp;gt;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;ExclusiveChoice Name=&quot;Choix exclusif&quot; Mandatory=&quot;Yes&quot; Display=&quot;HorizontalRadios&quot; &gt;[CRLF]  &lt;StandardAttribute Name=&quot;Nom&quot; Attribute=&quot;DisplayName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF]  &lt;StandardAttribute Name=&quot;Emplacement&quot; Attribute=&quot;LocationOrName&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;No&quot; /&gt;[CRLF] &lt;/ExclusiveChoice&gt;[CRLF] &lt;StandardAttribute Name=&quot;Icône&quot; Attribute=&quot;IconPicture&quot; Prefix=&quot;&quot; Suffix=&quot;&quot; Alignment=&quot;CNTR&quot; Caption=&quot;&quot; Mandatory=&quot;Yes&quot; /&gt;[CRLF]&lt;/Form&gt;
 PckgShowStrn=Yes
 Package.Comment=No
 Package.IconPicture=No
@@ -1366,8 +1366,8 @@ Shadow=0</a:DisplayPreferences>
 <a:PaperSource>15</a:PaperSource>
 <c:Symbols>
 <o:InteractionSymbol Id="o6">
-<a:ModificationDate>1621086461</a:ModificationDate>
-<a:Rect>((-22218,-36338), (25160,31018))</a:Rect>
+<a:ModificationDate>1622441267</a:ModificationDate>
+<a:Rect>((-22218,-19272), (25160,31018))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:BaseSymbol.Flags>4</a:BaseSymbol.Flags>
 <a:LineColor>15257808</a:LineColor>
@@ -1710,7 +1710,7 @@ ETIM 0 Arial,8,N</a:FontList>
 </o:MessageSymbol>
 <o:ActorSequenceSymbol Id="o16">
 <a:CreationDate>1620691648</a:CreationDate>
-<a:ModificationDate>1621086461</a:ModificationDate>
+<a:ModificationDate>1622441261</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-19540,24005), (-14741,27604))</a:Rect>
 <a:LineColor>128</a:LineColor>
@@ -1723,9 +1723,9 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:SlaveSubSymbols>
 <o:LifelineSymbol Id="o48">
-<a:ModificationDate>1621084359</a:ModificationDate>
-<a:Rect>((-17140,-20331), (-17040,24005))</a:Rect>
-<a:ListOfPoints>((-17140,24005),(-17140,-20331))</a:ListOfPoints>
+<a:ModificationDate>1622441267</a:ModificationDate>
+<a:Rect>((-17140,-19272), (-17040,24005))</a:Rect>
+<a:ListOfPoints>((-17140,24005),(-17140,-19272))</a:ListOfPoints>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
 <a:DashStyle>3</a:DashStyle>
@@ -1738,7 +1738,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:ActorSequenceSymbol>
 <o:UMLObjectSequenceSymbol Id="o32">
 <a:CreationDate>1620691651</a:CreationDate>
-<a:ModificationDate>1621086461</a:ModificationDate>
+<a:ModificationDate>1622441261</a:ModificationDate>
 <a:Rect>((-9511,24005), (-4711,27604))</a:Rect>
 <a:LineColor>33023</a:LineColor>
 <a:FillColor>8637161</a:FillColor>
@@ -1750,9 +1750,9 @@ DISPNAME 0 Arial,8,U</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:SlaveSubSymbols>
 <o:LifelineSymbol Id="o50">
-<a:ModificationDate>1621084359</a:ModificationDate>
-<a:Rect>((-7111,-20331), (-7011,24005))</a:Rect>
-<a:ListOfPoints>((-7111,24005),(-7111,-20331))</a:ListOfPoints>
+<a:ModificationDate>1622441267</a:ModificationDate>
+<a:Rect>((-7111,-19272), (-7011,24005))</a:Rect>
+<a:ListOfPoints>((-7111,24005),(-7111,-19272))</a:ListOfPoints>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>33023</a:LineColor>
 <a:DashStyle>3</a:DashStyle>
@@ -1815,7 +1815,7 @@ DISPNAME 0 Arial,8,U</a:FontList>
 </o:UMLObjectSequenceSymbol>
 <o:UMLObjectSequenceSymbol Id="o52">
 <a:CreationDate>1620691651</a:CreationDate>
-<a:ModificationDate>1621086461</a:ModificationDate>
+<a:ModificationDate>1622441261</a:ModificationDate>
 <a:Rect>((2566,24005), (7366,27604))</a:Rect>
 <a:LineColor>33023</a:LineColor>
 <a:FillColor>8637161</a:FillColor>
@@ -1827,9 +1827,9 @@ DISPNAME 0 Arial,8,U</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:SlaveSubSymbols>
 <o:LifelineSymbol Id="o53">
-<a:ModificationDate>1621084359</a:ModificationDate>
-<a:Rect>((4966,-20331), (5066,24005))</a:Rect>
-<a:ListOfPoints>((4966,24005),(4966,-20331))</a:ListOfPoints>
+<a:ModificationDate>1622441267</a:ModificationDate>
+<a:Rect>((4966,-19272), (5066,24005))</a:Rect>
+<a:ListOfPoints>((4966,24005),(4966,-19272))</a:ListOfPoints>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>33023</a:LineColor>
 <a:DashStyle>3</a:DashStyle>
@@ -1879,7 +1879,7 @@ DISPNAME 0 Arial,8,U</a:FontList>
 </o:UMLObjectSequenceSymbol>
 <o:UMLObjectSequenceSymbol Id="o55">
 <a:CreationDate>1620691651</a:CreationDate>
-<a:ModificationDate>1621086461</a:ModificationDate>
+<a:ModificationDate>1622441261</a:ModificationDate>
 <a:Rect>((16806,24005), (21605,27604))</a:Rect>
 <a:LineColor>33023</a:LineColor>
 <a:FillColor>8637161</a:FillColor>
@@ -1891,9 +1891,9 @@ DISPNAME 0 Arial,8,U</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:SlaveSubSymbols>
 <o:LifelineSymbol Id="o56">
-<a:ModificationDate>1621084359</a:ModificationDate>
-<a:Rect>((19205,-20331), (19305,24005))</a:Rect>
-<a:ListOfPoints>((19205,24005),(19205,-20331))</a:ListOfPoints>
+<a:ModificationDate>1622441267</a:ModificationDate>
+<a:Rect>((19205,-19272), (19305,24005))</a:Rect>
+<a:ListOfPoints>((19205,24005),(19205,-19272))</a:ListOfPoints>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>33023</a:LineColor>
 <a:DashStyle>3</a:DashStyle>
@@ -1917,7 +1917,7 @@ DISPNAME 0 Arial,8,U</a:FontList>
 </o:UMLObjectSequenceSymbol>
 <o:UMLObjectSequenceSymbol Id="o58">
 <a:CreationDate>1621082949</a:CreationDate>
-<a:ModificationDate>1621086461</a:ModificationDate>
+<a:ModificationDate>1622441261</a:ModificationDate>
 <a:Rect>((9812,24005), (14611,27604))</a:Rect>
 <a:LineColor>33023</a:LineColor>
 <a:FillColor>8637161</a:FillColor>
@@ -1929,9 +1929,9 @@ DISPNAME 0 Arial,8,U</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <c:SlaveSubSymbols>
 <o:LifelineSymbol Id="o59">
-<a:ModificationDate>1621084359</a:ModificationDate>
-<a:Rect>((12211,-20331), (12311,24005))</a:Rect>
-<a:ListOfPoints>((12211,24005),(12211,-20331))</a:ListOfPoints>
+<a:ModificationDate>1622441267</a:ModificationDate>
+<a:Rect>((12211,-19272), (12311,24005))</a:Rect>
+<a:ListOfPoints>((12211,24005),(12211,-19272))</a:ListOfPoints>
 <a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>33023</a:LineColor>
 <a:DashStyle>3</a:DashStyle>
