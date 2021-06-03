@@ -52,7 +52,7 @@
                         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                             @if (Route::has('login'))
                                 <ul class="top_icon">
-                                    @auth
+                                    @auth 
                                         <li class="button_login"> <a href="{{route('profile.show', [Auth::user()->id])}}">Profile</a> </li>
                                     @else
                                         <li class="button_login"> <a href="{{ route('login') }}">Log in</a></li>
@@ -94,7 +94,7 @@
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 ">
                                 <div class="text-bg">
                                     <img src="{{ asset('svg/logo.png') }}" alt="logo" style="width: 100%">
-                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br> tempor incididunt ut</span>
+                                    <span>Ready for an unforgetable adventure Era's end is out now<br> tempor incididunt ut</span>
                                     <a href="#">download</a>
                                 </div>
                             </div>
