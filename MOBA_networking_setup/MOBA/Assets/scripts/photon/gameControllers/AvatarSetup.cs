@@ -12,6 +12,8 @@ public class AvatarSetup : MonoBehaviour
     public Camera myCamera;
     public AudioListener myAL;
 
+    public Camera myMiniCam;
+
     public int playerHealth = 100;
     public int playerDmg = 25;
 
@@ -19,6 +21,7 @@ public class AvatarSetup : MonoBehaviour
     void Start()
     {
         PV = GetComponent<PhotonView>();
+        Cursor.visible = false;
         if (PV.IsMine)
         {
             PV.RPC("RPC_AddCharacter", RpcTarget.AllBuffered, GamePreps.PI.selectedCharacter);
@@ -27,6 +30,7 @@ public class AvatarSetup : MonoBehaviour
         {
             Destroy(myCamera);
             Destroy(myAL);
+            Destroy(myMiniCam);
         }
     }
     
