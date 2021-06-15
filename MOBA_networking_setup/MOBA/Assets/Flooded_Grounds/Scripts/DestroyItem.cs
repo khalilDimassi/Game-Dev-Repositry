@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class DestroyItem : MonoBehaviour
 {
+    private GameObject objToDestroy;
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    void ontriggerEnter(collider other)
-    { if (other.tag == "player")
+    void ontriggerEnter(Collider other)
+    { 
+        if (other.tag == "player")
         {
             Destroy(objToDestroy);
         }
-        Destroy
     }
 
     // Update is called once per frame

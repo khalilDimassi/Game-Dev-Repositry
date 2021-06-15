@@ -15,7 +15,7 @@ public class ChampSelectController : MonoBehaviour
 
     [SerializeField]
     private Sprite[] CharsDisplay;
-    private String[] Names = new string[] {"Ely", "Elitta", };
+    private String[] Names = new string[] {"Ely", "Serasi", "Elix", "Rogue", "Enigma", "Asaurus", "Trixy", "Leora", "Rhiannon"};
 
     private int pickedOne;
 
