@@ -7,7 +7,6 @@ public class ItemCollisionBehaviour : MonoBehaviour
     [SerializeField]
     public string[] collidedWith = {};
 
-
     void onControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit != null)
@@ -15,6 +14,4 @@ public class ItemCollisionBehaviour : MonoBehaviour
             print("i hit :" + hit.transform.tag);
         }
     }
-
-
 }

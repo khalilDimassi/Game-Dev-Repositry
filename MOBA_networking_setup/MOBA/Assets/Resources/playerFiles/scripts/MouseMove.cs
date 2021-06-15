@@ -22,6 +22,8 @@ public class MouseMove : MonoBehaviour
     private void Awake()
     {
         PV = GetComponent<PhotonView>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()

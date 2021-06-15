@@ -17,11 +17,15 @@ public class AvatarSetup : MonoBehaviour
     public int playerHealth = 100;
     public int playerDmg = 25;
 
+    //[SerializeField]
+    //private GameObject testingChar;
+    //[SerializeField]
+    //private Avatar testingAvatar;
+
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponent<PhotonView>();
-        Cursor.visible = false;
         if (PV.IsMine)
         {
             PV.RPC("RPC_AddCharacter", RpcTarget.AllBuffered, GamePreps.PI.selectedCharacter);
@@ -32,6 +36,11 @@ public class AvatarSetup : MonoBehaviour
             Destroy(myAL);
             Destroy(myMiniCam);
         }
+
+        //testing code
+        //myCharacter = Instantiate(testingChar, transform.position, transform.rotation, transform);
+        //GetComponent<Animator>().avatar = testingAvatar;
+        //GetComponent<Animator>().applyRootMotion = true;       
     }
     
     [PunRPC]
@@ -46,4 +55,6 @@ public class AvatarSetup : MonoBehaviour
         GetComponent<Animator>().avatar = GamePreps.PI.allAvatars[whichCharacter];
 
     }
+
+
 }
